@@ -15,7 +15,14 @@
 
 <ul>
 {% for x in list %}
-    <li>{{ forloop.counter }} - {{ x }}</li>
+    {% if x == 4.4 %}
+        <li>{{ forloop.counter }} - {{ x|add:0.6 }}</li>
+    {% else %}
+        <li>{{ forloop.counter }} - {{ x }}</li>
+    {% endif %}
+
 {% endfor %}
 </ul>
+
+
 {% endblock  %}
