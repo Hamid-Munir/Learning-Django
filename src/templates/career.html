@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>This is the pages to give depression</h1>
+<p>careeeeeer page</p>
+
+
+<p>
+    {{ my_text }}, 
+     {{ my_email }}
+</p>
+<p>
+    {{ list }}
+</p>
+
+<ul>
+{% for x in list %}
+    <li>{{ forloop.counter }} - {{ x }}</li>
+{% endfor %}
+</ul>
+{% endblock  %}

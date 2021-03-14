@@ -5,10 +5,14 @@ def homepage_view(request, *args, **kwargs):
     print(request.user)
     print(args, kwargs)
     # return HttpResponse("<h1>hello world</h1>")
-    return 
+    return render(request, "home.html", {})
 
-def contact_view(*args, **kwargs):
-    return HttpResponse("<h1>contant page</h1>")
+def contact_view(request, *args, **kwargs):
+    return render(request, "contact.html", {})
 
-def carrer_view(*args, **kwargs):
-    return HttpResponse("<h1>contant page</h1>")
+def career_view(request, *args, **kwargs):
+    my_context = {"my_text": "context testing in carrer", "my_email": "hello@gamil.com", "list": [1,2,3,4.4,5]}
+    return render(request, "career.html", my_context)
+
+def cat_view(request, *args, **kwargs):
+    return render(request, "cat.html", {})
