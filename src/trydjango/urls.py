@@ -24,6 +24,6 @@ urlpatterns = [
     path('career/', career_view),
     path('cat/', cat_view),
     path('admin/', admin.site.urls),
-    path('product/', product_detail_view),
+    path('product_details/', product_detail_view),
     
 ]
